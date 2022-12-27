@@ -1,0 +1,20 @@
+# Copyright 2023 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: 'Test All Mappings'
+on:
+  - workflow_dispatch
+jobs:
+  build:
+    if: github.repository_owner == 'manna-harbour'
+    uses: ./.github/workflows/main.yml
+    with:
+      mode: '["build"]'
+      keyboard: '[
+        "Keebio_Levinson",
+        "Kyria",
+      ]'
+      mapping: '[
+        "extended_thumbs",
+        "pinkie_stagger",
+      ]'

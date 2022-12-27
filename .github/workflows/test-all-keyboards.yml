@@ -1,0 +1,35 @@
+# Copyright 2023 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: 'Test All Keyboards'
+on:
+  - workflow_dispatch
+jobs:
+  build:
+    if: github.repository_owner == 'manna-harbour'
+    uses: ./.github/workflows/main.yml
+    with:
+      mode: '["build"]'
+      keyboard: '[
+        "default",
+        "Atreus62",
+        "Boardsource_4x12",
+        "Boardsource_5x12",
+        "Boardsource_Lulu",
+        "Boardsource_Microdox",
+        "CRKBD",
+        "Crowboard",
+        "Ergo_Travel",
+        "FFKB",
+        "Helix",
+        "Keebio_Iris",
+        "Keebio_Levinson",
+        "Keebio_Nyquist",
+        "KLOR",
+        "Kyria",
+        "Lily58",
+        "Lunakey_Pico",
+        "Rhymestone",
+        "Sofle",
+        "Zodiark",
+      ]'

@@ -1,0 +1,13 @@
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: 'Test'
+on:
+  - push
+  - pull_request
+  - workflow_dispatch
+jobs:
+  test:
+    uses: ./.github/workflows/main.yml
+    with:
+      mode: '["test"]'

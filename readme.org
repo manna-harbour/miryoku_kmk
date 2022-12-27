@@ -1,0 +1,237 @@
+# Copyright 2021 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+# M-x org-make-toc to update TOC
+# https://github.com/alphapapa/org-make-toc
+
+* Miryoku KMK [[https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/logos/miryoku-roa-32.png]]
+:PROPERTIES:
+:TOC:      :include descendants :depth 1
+:END:
+
+[[https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/cover/miryoku-kle-cover-miryoku_kmk.png]]
+
+[[https://github.com/manna-harbour/miryoku/][Miryoku]] is an ergonomic, minimal, orthogonal, and universal keyboard layout.
+[[https://github.com/manna-harbour/miryoku_kmk][Miryoku KMK]] is the Miryoku implementation for [[https://github.com/KMKfw/kmk_firmware][KMK]].
+
+This document describes Miryoku KMK only.
+For Miryoku documentation, implementations, and discussions and support, see [[https://github.com/manna-harbour/miryoku/][Miryoku]].
+
+:CONTENTS:
+- [[#configuration-options][Configuration Options]]
+- [[#building][Building]]
+- [[#installation][Installation]]
+- [[#additional-and-experimental-features][Additional and Experimental Features]]
+- [[#issues][Issues]]
+:END:
+
+** Configuration Options
+:PROPERTIES:
+:TOC:      :include descendants :depth 1 :local depth
+:END:
+:CONTENTS:
+- [[#keyboard][Keyboard]]
+- [[#rgb][RGB]]
+- [[#miryoku-alternative-layout-options][Miryoku Alternative Layout Options]]
+- [[#mapping][Mapping]]
+:END:
+
+**** Keyboard
+
+Select the mapping of Miryoku keymap layout onto keyboard keymap layout by specifying the keyboard.
+Where more keys are available, on each hand only the main alpha block of 3 rows by 5 columns and the 3 most appropriate thumb keys are used.
+The default is for a split 3x5+3 keyboard keymap layout.
+
+- ~KMK_KEYBOARD=ATREUS62~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/atreus62.
+- ~KMK_KEYBOARD=BOARDSOURCE_4X12~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/boardsource/4x12. See [[https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/mapping/miryoku-kle-mapping-ortho_4x12.png][diagram]].
+- ~KMK_KEYBOARD=BOARDSOURCE_5X12~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/boardsource/5x12.
+- ~KMK_KEYBOARD=BOARDSOURCE_LULU~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/boardsource/Lulu.
+- ~KMK_KEYBOARD=BOARDSOURCE_MICRODOX~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/boardsource/microdox.
+- ~KMK_KEYBOARD=CRKBD~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/crkbd.
+- ~KMK_KEYBOARD=CROWBOARD~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/crowboard.
+- ~KMK_KEYBOARD=ERGO_TRAVEL~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/ergo_travel.
+- ~KMK_KEYBOARD=FFKB~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/fingerpunch/ffkb.
+- ~KMK_KEYBOARD=HELIX~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/helix.
+- ~KMK_KEYBOARD=KEEBIO_IRIS~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/keebio/iris.
+- ~KMK_KEYBOARD=KEEBIO_LEVINSON~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/keebio/levinson. See [[https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/mapping/miryoku-kle-mapping-ortho_4x12-extended_thumbs.png][diagram]].
+- ~KMK_KEYBOARD=KEEBIO_NYQUIST~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/keebio/nyquist.
+- ~KMK_KEYBOARD=KLOR~ https://github.com/moritz-john/kmk-config-klor.
+- ~KMK_KEYBOARD=KYRIA~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/kyria. See [[https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/mapping/miryoku-kle-mapping-kyria.png][diagram]].
+- ~KMK_KEYBOARD=LILY58~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/lily58.
+- ~KMK_KEYBOARD=LUNAKEY_PICO~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/lunakey_pico.
+- ~KMK_KEYBOARD=RHYMESTONE~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/rhymestone.
+- ~KMK_KEYBOARD=SOFLE~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/sofle.
+- ~KMK_KEYBOARD=ZODIARK~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/zodiark.
+
+**** RGB
+
+Select the RGB keycodes.
+The default is no RGB keycodes.
+Requires manual module configuration according to the KMK documentation.
+
+- ~KMK_RGB=LED~ https://github.com/KMKfw/kmk_firmware/blob/master/docs/en/led.md.
+- ~KMK_RGB=PEG~ https://github.com/KMKfw/kmk_firmware/blob/master/docs/en/peg_rgb_matrix.md.
+- ~KMK_RGB=RGB~ https://github.com/KMKfw/kmk_firmware/blob/master/docs/en/rgb.md.
+
+**** Miryoku Alternative Layout Options
+
+See [[https://github.com/manna-harbour/miryoku/tree/master/docs/reference#alternative-layouts][Alternative Layouts in the Miryoku Reference Manual]].
+
+**** Mapping
+
+Alternative mapping options are available for some keyboards.
+
+- ~MIRYOKU_MAPPING=EXTENDED_THUMBS~ The thumb keys are moved 1u to extend the thumbs. Only available with ~KMK_KEYBOARD=KYRIA~. See [[https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/mapping/miryoku-kle-mapping-kyria-extended_thumbs.png][diagram]].
+- ~MIRYOKU_MAPPING=PINKIE_STAGGER~ The pinkie columns are moved down one row to add pinkie stagger. Only available with ~KMK_KEYBOARD=KEEBIO_LEVINSON~ See [[https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/mapping/miryoku-kle-mapping-ortho_4x12-split.png][diagram]].
+** Building
+:PROPERTIES:
+:TOC:      :include descendants :depth 1 :local depth
+:END:
+
+Generate a personalised Miryoku KMK keymap file in ~main.py~ format.
+
+:CONTENTS:
+- [[#local-builds][Local Builds]]
+- [[#workflow-builds][Workflow Builds]]
+:END:
+
+*** Local Builds
+
+Requires ~make~, ~sh~, ~cpp~, and ~sed~.
+
+First ~cd~ to the [[src]] directory then build with ~make~.
+The generated file is [[src/build/main.py]].
+
+To select [[#configuration-options][configuration options]], append them to the ~make~ command line.
+
+#+BEGIN_SRC sh :tangle no
+make -B # defaults
+make -B KMK_KEYBOARD=KEEBIO_LEVINSON KMK_RGB=RGB MIRYOKU_ALPHAS=QWERTY MIRYOKU_EXTRA=COLEMAKDH MIRYOKU_TAP=QWERTY MIRYOKU_NAV=INVERTEDT MIRYOKU_CLIPBOARD=WIN MIRYOKU_LAYERS=FLIP MIRYOKU_MAPPING=PINKIE_STAGGER # options
+#+END_SRC
+
+*** Workflow Builds
+:PROPERTIES:
+:TOC:      :include descendants :depth 1 :local depth
+:END:
+
+A keymap file can be generated via GitHub Actions workflows without use of a local build environment.
+
+First log in to GitHub, fork the Miryoku KMK repository, and enable workflows.
+
+To access a workflow, visit the Actions tab and select the workflow.
+To download the keymap file from a workflow run, select the workflow, select the workflow run, select the desired Artifacts, and unzip the downloaded zip file.
+
+Workflow files are in [[.github/workflows]].
+
+:CONTENTS:
+- [[#build-inputs-workflow][Build Inputs Workflow]]
+:END:
+
+**** Build Inputs Workflow
+
+The Build Inputs workflow can be used without editing workflow files.
+Select Run workflow, select the Branch and fill out the form with the desired [[#configuration-options][configuration options]], and activate Run workflow.
+
+** Installation
+
+- [[https://github.com/KMKfw/kmk_firmware/blob/master/docs/en/Getting_Started.md][Install KMK]].
+- Install the keyboard definition and default keymap for your keyboard.
+- Test your keyboard.
+- [[#building][Generate the Miryoku KMK keymap file]].
+- Install the keymap file on your keyboard.
+
+The generated [[src/build/main.py]] can be used as-is with a ~kb.py~ that contains all of the hardware configuration.
+If the default ~main.py~ supplied with ~kb.py~ contains hardware configuration, it will need to be manually added to the generated [[src/build/main.py]] or moved into the supplied ~kb.py~.
+For an example of a ~kb.py~ containing all of the hardware configuration, see https://github.com/moritz-john/kmk-config-klor.
+
+** Additional and Experimental Features
+:PROPERTIES:
+:TOC:      :include descendants :depth 1 :local depth
+:END:
+:CONTENTS:
+- [[#caps-word][Caps Word]]
+- [[#customisation][Customisation]]
+- [[#𝑥mk][𝑥MK]]
+:END:
+
+*** Caps Word
+
+[[https://github.com/KMKfw/kmk_firmware/blob/master/docs/en/capsword.md][Caps Word]] takes the place of Caps Lock on Nav.
+Double tap for Caps Lock.
+
+*** Customisation
+
+See https://github.com/manna-harbour/miryoku/discussions/85.
+
+*** 𝑥MK
+
+Use Miryoku KMK with any keyboard with [[https://github.com/manna-harbour/xmk][𝑥MK]].
+
+[[#building][Build]] with the default [[#keyboard][keyboard]].
+
+Use the generated Miryoku KMK ~main.py~ in place of the KMK ~boards/xmk/main.py~.
+
+** Issues
+:PROPERTIES:
+:TOC:      :include descendants :depth 1 :local depth
+:END:
+:CONTENTS:
+- [[#hold-tap-behaviour][Hold-Tap Behaviour]]
+- [[#missing-functions][Missing Functions]]
+:END:
+
+*** Hold-Tap Behaviour
+
+Hold-Tap configuration options in KMK are limited and the behaviour of dual-function keys in Miryoku KMK does not match other Miryoku implementations.
+*** Missing Functions
+:PROPERTIES:
+:TOC:      :include descendants :depth 1 :local depth
+:END:
+
+Some keycodes and keymap features included in the Miryoku documentation and in other Miryoku implementations are not supported in KMK and so are missing in Miryoku KMK.
+
+:CONTENTS:
+- [[#bluetooth][Bluetooth]]
+- [[#external-power][External Power]]
+- [[#fun-cluster][Fun Cluster]]
+- [[#horizontal-mouse-scroll][Horizontal Mouse Scroll]]
+- [[#rgb][RGB]]
+- [[#shift-functions][Shift Functions]]
+:END:
+
+**** Bluetooth
+
+No Bluetooth keycodes are present in KMK, see https://github.com/KMKfw/kmk_firmware/issues/452.
+
+# Direct Bluetooth profile selection is not supported in KMK.
+# Next / Prev are used instead.
+# See the Media layer in the generated keymap for details.
+
+**** External Power
+
+External power control is not supported in KMK.
+
+**** Fun Cluster
+
+Fun Cluster [[https://github.com/manna-harbour/miryoku/tree/master/docs/reference#clipboard][clipboard]] keycodes are not supported in KMK.
+
+**** Horizontal Mouse Scroll
+
+Horizontal mouse scroll is not supported in KMK.
+
+**** RGB
+
+KMK uses different keycodes for each RGB implementation, and each implementation supports a different subset of features.
+The RGB keycodes included in the Miryoku KMK keymap will depend on the [[#RGB][RGB]] option.
+For the corresponding keycodes, see [[src/miryoku.h]].
+
+**** Shift Functions
+
+Shift functions as used on Media are not supported in KMK, see https://github.com/KMKfw/kmk_firmware/issues/409.
+Only the unshifted functions are included.
+
+* 
+
+[[https://github.com/manna-harbour][https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/logos/manna-harbour-boa-32.png]]
+
+
