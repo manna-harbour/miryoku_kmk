@@ -41,6 +41,8 @@
   #include "mapping/40/ortho_4x10.h"
 #elif defined (KMK_KEYBOARD_SOFLE)
   #include "mapping/60/sofle.h"
+#elif defined (KMK_KEYBOARD_SPLAYTORAID)
+  #include "mapping/41/splaytoraid.h"
 #else
   #include "mapping/36/minidox.h"
 #endif

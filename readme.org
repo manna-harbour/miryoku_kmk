@@ -1,4 +1,4 @@
-# Copyright 2021 Manna Harbour
+ # Copyright 2023 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
 # M-x org-make-toc to update TOC
@@ -61,6 +61,7 @@ The default is for a split 3x5+3 keyboard keymap layout.
 - ~KMK_KEYBOARD=LUNAKEY_PICO~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/lunakey_pico.
 - ~KMK_KEYBOARD=RHYMESTONE~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/rhymestone.
 - ~KMK_KEYBOARD=SOFLE~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/sofle.
+- ~KMK_KEYBOARD=SPLAYTORAID~ https://github.com/moritz-john/kmk-config-splaytoraid.
 - ~KMK_KEYBOARD=ZODIARK~ https://github.com/KMKfw/kmk_firmware/tree/master/boards/zodiark.
 
 **** RGB
